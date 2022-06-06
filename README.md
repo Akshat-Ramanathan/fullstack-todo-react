@@ -10,7 +10,11 @@ With basic CRUD operations on Node (ExpressJS) backend
 
 In the project directory, you can run:
 
-### `npm run start:app`
+### `npm run start:app` for UI
+
+### `npm run start:mock` for mock (json-server)
+
+### `npm start` for concurrently stsrting the fullstack application
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
