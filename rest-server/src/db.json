@@ -24,6 +24,11 @@
       "id": 5,
       "title": "and it works!",
       "complete": false
+    },
+    {
+      "title": "final",
+      "complete": true,
+      "id": 6
     }
   ]
 }

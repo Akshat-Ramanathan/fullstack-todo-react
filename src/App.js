@@ -1,15 +1,21 @@
 import Form from './components/Form';
 import Todos from './components/Todos';
 import { useEffect, useState } from 'react';
-import data from './mockdb';
+import { API } from './constants';
+import axios from 'axios';
+// import data from './mockdb';
 
 function App(props) {
 
   const [todos, setTodos] = useState(null);
 
   useEffect(() => {
-    setTodos(data.todo_list);
-  }, [todos]);
+    async function fetchData() {
+      const response = await axios.get(`${API}`);
+      setTodos(response.data);
+    }
+    fetchData();
+  }, []);
 
   return (
     <>

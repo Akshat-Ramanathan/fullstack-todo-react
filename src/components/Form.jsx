@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+import { API } from '../constants';
 
 function Form(props) {
 
@@ -8,8 +10,19 @@ function Form(props) {
         setValue(e.target.value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            await axios.post(`${API}`,
+                {
+                    title: value,
+                    complete: false
+                });
+        }
+        catch {
+            console.log("Error");
+        }
+        window.location.reload(false);
     }
 
     return (
